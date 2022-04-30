@@ -26,10 +26,7 @@ class Beer(SQLModel, table=True):
 
     @validator("rate", always=True)
     def calculate_rate(cls, v, values):
-
+        print(f"\033[31m{values}\033[m")
         rate = mean([values["flavor"], values["image"], values["cost"]])
 
         return int(rate)
-
-
-brewdog = Beer(name="Bewdog", style="NEIPA", flavor=5, image=8, cost=8)
