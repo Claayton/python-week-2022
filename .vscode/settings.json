@@ -1,26 +1,19 @@
 {
-  "extensions.showBuiltin": true,
-  "redhat.telemetry.enabled": false,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
-  "editor.fontSize": 18,
-  "git.autofetch": true,
-  "python.insidersChannel": "off",
-  "update.mode": "manual",
-  "extensions.autoUpdate": false,
-  "files.autoSave": "onFocusChange",
-  "files.exclude": {
-    "**/*.egg-info": true,
-    ".gitpod.yml": true,
-    "LICENSE": true,
-    ".vscode/": true,
-    "**/__pycache__": true,
-    ".gitignore": true,
-    ".mypy_cache": true,
-    "coverage.xml": true,
-    ".pytest_cache": true
-  },
-  "editor.mouseWheelZoom": true,
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.enabled": true
-}
+    "git.autofetch": true,
+    "python.insidersChannel": "off",
+    "update.mode": "manual",
+    "extensions.autoUpdate": false,
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+      "**/*.egg-info": true,
+      ".gitpod.yml": true,
+      "**/__pycache__": true,
+      ".mypy_cache": true,
+      "coverage.xml": true,
+      ".pytest_cache": true
+    },
+    "editor.mouseWheelZoom": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+  }

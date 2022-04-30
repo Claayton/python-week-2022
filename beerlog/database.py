@@ -1,17 +1,17 @@
-from unicodedata import category
 import warnings
 
-import warnings
 from sqlalchemy.exc import SAWarning
+from sqlmodel import Session, create_engine
 from sqlmodel.sql.expression import Select, SelectOfScalar
+
+from beerlog import models
+from beerlog.config import settings
+
 warnings.filterwarnings("ignore", category=SAWarning)
 SelectOfScalar.inherit_cache = True
-Select.inherit_cache=True
-from sqlmodel import create_engine, Session
-from beerlog.config import settings
-from beerlog import models
+Select.inherit_cache = True
 
-engine = create_engine(settings.database.url)
+engine = create_engine(settings.database.connection_string)
 
 models.SQLModel.metadata.create_all(engine)
 

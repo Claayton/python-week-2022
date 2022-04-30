@@ -1,8 +1,10 @@
 from typing import Optional
+
 import typer
-from beerlog.core import add_beer_to_database, get_beers_from_database
-from rich.table import Table
 from rich.console import Console
+from rich.table import Table
+
+from beerlog.core import add_beer_to_database, get_beers_from_database
 
 main = typer.Typer(help="Beer Management Application")
 console = Console()
@@ -19,11 +21,7 @@ def add(
     """Adds a new beer to database"""
 
     if add_beer_to_database(
-        name=name,
-        style=style,
-        flavor=flavor,
-        image=image,
-        cost=cost
+        name=name, style=style, flavor=flavor, image=image, cost=cost
     ):
         print("🍺 Beer added to database!")
 
