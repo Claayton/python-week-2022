@@ -1,4 +1,4 @@
 name = "beerlog"
 
 [database]
-url = "sqlite:///beerlog.db"
+connection_string = "sqlite:///beerlog.db"
